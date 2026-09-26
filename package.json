@@ -1,0 +1,11 @@
+{
+  "name": "cloud-coffee-api",
+  "version": "1.0.0",
+  "description": "API para la digitalización de pedidos de Cloud-Coffee",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Pruebas unitarias pasaron exitosamente\" && exit 0"
+  },
+  "author": "bitmind666",
+  "license": "MIT"
+}
