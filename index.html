@@ -33,6 +33,34 @@
             padding: 10px;
             margin-top: 30px;
         }
+        form {
+            background-color: #fff8f0;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #d7ccc8;
+        }
+        input, select {
+            padding: 5px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #bcaaa4;
+        }
+        button {
+            background-color: #6d4c41;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4e342e;
+        }
+        #resultado {
+            font-weight: bold;
+            color: #2e7d32;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -43,17 +71,37 @@
     <main>
         <h2>Bienvenido</h2>
         <p>Disfruta de nuestro café artesanal, preparado con granos seleccionados.</p>
+
         <h2>Menú</h2>
         <ul>
             <li>Capuchino - $45</li>
             <li>Americano - $35</li>
             <li>Latte - $50</li>
         </ul>
+
+        <h2>Promociones</h2>
+        <form id="form-promo">
+            <label>Precio del capuchino: 
+                <input type="number" id="precio" value="45" min="1">
+            </label><br><br>
+            <label>Tipo de cliente:
+                <select id="tipo">
+                    <option value="normal">Normal</option>
+                    <option value="estudiante">Estudiante (10%)</option>
+                    <option value="cumple">Cumpleaños (15%)</option>
+                </select>
+            </label><br><br>
+            <button type="button" onclick="calcularPromo()">Calcular</button>
+        </form>
+        <p id="resultado"></p>
+
         <h2>Contacto</h2>
         <p>Av. Universidad #123, Jalisco, México</p>
     </main>
     <footer>
         <p>Cloud-Coffee &copy; 2026</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
